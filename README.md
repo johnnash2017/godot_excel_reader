@@ -1,8 +1,54 @@
 ![Plugin Logo](icon.svg)
 
 godot_excel_reader
-Analyze. xlsx files and return a dictionary
+解析.xlsx文件并返回一个字典 | Analyze. xlsx files and return a dictionary
 
+表格 | Table
+![image](https://github.com/user-attachments/assets/bec1a682-c63f-4e03-aa57-c7e14c636fd0)
+
+测试结果 | Test results
+```gdscript
+Sheet: ["Sheet1", "Sheet2"]
+"Sheet1"
+{
+	"1": {
+		"1": "one",
+		"2": "嘿嘿嘿"
+	},
+	"2": {
+		"1": "B",
+		"2": "#VALUE!"
+	},
+	"3": {
+		"1": 3,
+		"2": "3④"
+	},
+	"4": {
+		"1": "④",
+		"2": 777
+	}
+}
+"Sheet2"
+{
+	"1": {
+		"1": 1,
+		"2": "A"
+	},
+	"2": {
+		"1": 2,
+		"2": "B"
+	},
+	"3": {
+		"1": 3,
+		"2": "C"
+	},
+	"4": {
+		"1": 4,
+		"2": "D"
+	}
+}
+
+```
 Test code
 ```gdscript
 extends Node
