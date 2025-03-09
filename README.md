@@ -7,6 +7,7 @@ godot_excel_reader
 
 Sheet1
 ![image](https://github.com/user-attachments/assets/bec1a682-c63f-4e03-aa57-c7e14c636fd0)
+
 Sheet2
 ![image](https://github.com/user-attachments/assets/56d31522-d1e6-4ad7-9f57-4e560adf5581)
 
