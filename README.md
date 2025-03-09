@@ -1,4 +1,4 @@
-![Plugin Logo](icon.svg)
+![297964da-b6c8-44ba-a4c7-224865842589](https://github.com/user-attachments/assets/6ada112b-d94c-4b40-8e07-eaae27012007)
 
 godot_excel_reader
 解析.xlsx文件并返回一个字典 | Analyze. xlsx files and return a dictionary
