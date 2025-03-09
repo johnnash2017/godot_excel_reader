@@ -4,7 +4,11 @@ godot_excel_reader
 解析.xlsx文件并返回一个字典 | Analyze. xlsx files and return a dictionary
 
 表格 | Table
+Sheet1
 ![image](https://github.com/user-attachments/assets/bec1a682-c63f-4e03-aa57-c7e14c636fd0)
+Sheet2
+![image](https://github.com/user-attachments/assets/56d31522-d1e6-4ad7-9f57-4e560adf5581)
+
 
 测试结果 | Test results
 ```gdscript
