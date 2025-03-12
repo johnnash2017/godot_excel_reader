@@ -7,17 +7,22 @@ class ExcelFile:
 	
 	var _zip_reader: ZIPReader        # ZIP 读取器实例 | ZIP reader instance
 	var _workbook: ExcelWorkbook = null  # 工作簿缓存 | Workbook cache
+	var _path:String
 	
 	# 构造函数 - 打开Excel文件（本质是ZIP包） | Constructor - Open Excel file (which is a ZIP package)
 	func _init(path: String):
+		_path=path
 		_zip_reader = ZIPReader.new()
-		if _zip_reader.open(path) != OK:
-			push_error("Excel文件打开失败: " + path)  # 错误处理 | Error handling
-	
+		if _zip_reader.open(_path) != OK:
+			push_error("Excel文件打开失败: " + _path)  # 错误处理 | Error handling
+		_zip_reader.close()
+		
 	# 获取工作簿（延迟初始化）| Get workbook (lazy initialization)
 	func get_workbook() -> ExcelWorkbook:
+		_zip_reader.open(_path)
 		if not _workbook:
 			_workbook = ExcelWorkbook.new(_zip_reader)
+		_zip_reader.close()
 		return _workbook
 	
 	# 静态方法打开Excel文件 | Static method to open Excel file
